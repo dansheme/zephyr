@@ -16,8 +16,12 @@
 #include "ll_sw/pdu.h"
 #include "ll_sw/ctrl.h"
 
-static u8_t pub_addr[BDADDR_SIZE];
-static u8_t rnd_addr[BDADDR_SIZE];
+static u8_t pub_addr[BDADDR_SIZE] = {0xFF, 0x02, 0x03, 0x04, 0x05, 0xFF};
+static u8_t rnd_addr[BDADDR_SIZE] = {0xFF, 0x02, 0x03, 0x04, 0x05, 0xFF};
+
+// static u8_t pub_addr[BDADDR_SIZE];
+// static u8_t rnd_addr[BDADDR_SIZE];
+
 
 u8_t *ll_addr_get(u8_t addr_type, u8_t *bdaddr)
 {
